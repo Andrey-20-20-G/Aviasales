@@ -57,6 +57,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="laba4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laba4.Designer.cs">
+      <DependentUpon>laba4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Line_Avia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,18 @@
     <Compile Include="Ticket.Designer.cs">
       <DependentUpon>Ticket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Passengercom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Passengercom.Designer.cs">
+      <DependentUpon>Passengercom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ticketcom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ticketcom.Designer.cs">
+      <DependentUpon>Ticketcom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laba4.resx">
+      <DependentUpon>laba4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Line_Avia.resx">
       <DependentUpon>Line_Avia.cs</DependentUpon>
@@ -114,6 +135,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passengercom.resx">
+      <DependentUpon>Passengercom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ticketcom.resx">
+      <DependentUpon>Ticketcom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

@@ -97,5 +97,27 @@ namespace Aviasales
             var users = new Users();
             users.Show();
         }
+
+
+        private void связьЧерезДанныеОБилетахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var passcom = new Passengercom();
+            passcom.Show();
+        }
+
+        private void связьЧерезДанныеОПассажирахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var ticketcom = new Ticketcom();
+            ticketcom.Show();
+        }
+
+        private void формаДля4ЛабыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var laba4 = new laba4();
+            laba4.Show();
+        }
     }
 }

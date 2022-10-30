@@ -38,5 +38,27 @@ namespace Aviasales
             var form1 = new Form1();
             form1.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = -1;
+            if
+            (((DataRowView)ticketBindingSource.Current)["User_ID"].ToString() !=
+            "")
+            {
+                id =
+                (int)(((DataRowView)ticketBindingSource.Current)["User_ID"]);
+            }
+            id = Users.fs.ShowSelectForm(id);
+            if (id >= 0)
+            {
+                MessageBox.Show(id.ToString());
+                ((DataRowView)ticketBindingSource.Current)["User_ID"]
+                = id;
+                ticketBindingSource.EndEdit();
+
+
+            }
+        }
     }
 }

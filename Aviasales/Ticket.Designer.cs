@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
             System.Windows.Forms.Label ticket_IDLabel;
             System.Windows.Forms.Label iD_LineLabel;
             System.Windows.Forms.Label service_IDLabel;
             System.Windows.Forms.Label user_IDLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ticket));
             this.button1 = new System.Windows.Forms.Button();
             this.aviasalesDataSet = new Aviasales.AviasalesDataSet();
             this.ticketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ticketTableAdapter = new Aviasales.AviasalesDataSetTableAdapters.TicketTableAdapter();
             this.tableAdapterManager = new Aviasales.AviasalesDataSetTableAdapters.TableAdapterManager();
             this.ticketBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ticketBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ticket_IDTextBox = new System.Windows.Forms.TextBox();
             this.iD_LineTextBox = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ticket_IDLabel = new System.Windows.Forms.Label();
             iD_LineLabel = new System.Windows.Forms.Label();
             service_IDLabel = new System.Windows.Forms.Label();
@@ -71,6 +72,42 @@
             this.ticketBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ticketDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ticket_IDLabel
+            // 
+            ticket_IDLabel.AutoSize = true;
+            ticket_IDLabel.Location = new System.Drawing.Point(55, 95);
+            ticket_IDLabel.Name = "ticket_IDLabel";
+            ticket_IDLabel.Size = new System.Drawing.Size(76, 20);
+            ticket_IDLabel.TabIndex = 2;
+            ticket_IDLabel.Text = "Ticket ID:";
+            // 
+            // iD_LineLabel
+            // 
+            iD_LineLabel.AutoSize = true;
+            iD_LineLabel.Location = new System.Drawing.Point(67, 137);
+            iD_LineLabel.Name = "iD_LineLabel";
+            iD_LineLabel.Size = new System.Drawing.Size(64, 20);
+            iD_LineLabel.TabIndex = 4;
+            iD_LineLabel.Text = "ID Line:";
+            // 
+            // service_IDLabel
+            // 
+            service_IDLabel.AutoSize = true;
+            service_IDLabel.Location = new System.Drawing.Point(45, 180);
+            service_IDLabel.Name = "service_IDLabel";
+            service_IDLabel.Size = new System.Drawing.Size(86, 20);
+            service_IDLabel.TabIndex = 6;
+            service_IDLabel.Text = "Service ID:";
+            // 
+            // user_IDLabel
+            // 
+            user_IDLabel.AutoSize = true;
+            user_IDLabel.Location = new System.Drawing.Point(63, 229);
+            user_IDLabel.Name = "user_IDLabel";
+            user_IDLabel.Size = new System.Drawing.Size(68, 20);
+            user_IDLabel.TabIndex = 8;
+            user_IDLabel.Text = "User ID:";
             // 
             // button1
             // 
@@ -133,9 +170,34 @@
             this.ticketBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ticketBindingNavigator.Name = "ticketBindingNavigator";
             this.ticketBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ticketBindingNavigator.Size = new System.Drawing.Size(1074, 33);
+            this.ticketBindingNavigator.Size = new System.Drawing.Size(1074, 38);
             this.ticketBindingNavigator.TabIndex = 1;
             this.ticketBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 33);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 33);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -143,7 +205,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -152,34 +214,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 20);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(65, 25);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 38);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -187,7 +243,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -196,49 +252,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(34, 33);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(34, 28);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 38);
             // 
             // ticketBindingNavigatorSaveItem
             // 
             this.ticketBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.ticketBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ticketBindingNavigatorSaveItem.Image")));
             this.ticketBindingNavigatorSaveItem.Name = "ticketBindingNavigatorSaveItem";
-            this.ticketBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.ticketBindingNavigatorSaveItem.Size = new System.Drawing.Size(34, 33);
             this.ticketBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.ticketBindingNavigatorSaveItem.Click += new System.EventHandler(this.ticketBindingNavigatorSaveItem_Click);
-            // 
-            // ticket_IDLabel
-            // 
-            ticket_IDLabel.AutoSize = true;
-            ticket_IDLabel.Location = new System.Drawing.Point(55, 95);
-            ticket_IDLabel.Name = "ticket_IDLabel";
-            ticket_IDLabel.Size = new System.Drawing.Size(76, 20);
-            ticket_IDLabel.TabIndex = 2;
-            ticket_IDLabel.Text = "Ticket ID:";
             // 
             // ticket_IDTextBox
             // 
@@ -248,15 +277,6 @@
             this.ticket_IDTextBox.Size = new System.Drawing.Size(183, 26);
             this.ticket_IDTextBox.TabIndex = 3;
             // 
-            // iD_LineLabel
-            // 
-            iD_LineLabel.AutoSize = true;
-            iD_LineLabel.Location = new System.Drawing.Point(67, 137);
-            iD_LineLabel.Name = "iD_LineLabel";
-            iD_LineLabel.Size = new System.Drawing.Size(64, 20);
-            iD_LineLabel.TabIndex = 4;
-            iD_LineLabel.Text = "ID Line:";
-            // 
             // iD_LineTextBox
             // 
             this.iD_LineTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "ID_Line", true));
@@ -265,15 +285,6 @@
             this.iD_LineTextBox.Size = new System.Drawing.Size(183, 26);
             this.iD_LineTextBox.TabIndex = 5;
             // 
-            // service_IDLabel
-            // 
-            service_IDLabel.AutoSize = true;
-            service_IDLabel.Location = new System.Drawing.Point(45, 180);
-            service_IDLabel.Name = "service_IDLabel";
-            service_IDLabel.Size = new System.Drawing.Size(86, 20);
-            service_IDLabel.TabIndex = 6;
-            service_IDLabel.Text = "Service ID:";
-            // 
             // service_IDTextBox
             // 
             this.service_IDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ticketBindingSource, "Service_ID", true));
@@ -281,15 +292,6 @@
             this.service_IDTextBox.Name = "service_IDTextBox";
             this.service_IDTextBox.Size = new System.Drawing.Size(183, 26);
             this.service_IDTextBox.TabIndex = 7;
-            // 
-            // user_IDLabel
-            // 
-            user_IDLabel.AutoSize = true;
-            user_IDLabel.Location = new System.Drawing.Point(63, 229);
-            user_IDLabel.Name = "user_IDLabel";
-            user_IDLabel.Size = new System.Drawing.Size(68, 20);
-            user_IDLabel.TabIndex = 8;
-            user_IDLabel.Text = "User ID:";
             // 
             // user_IDTextBox
             // 
@@ -348,12 +350,24 @@
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 150;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.button2.Location = new System.Drawing.Point(398, 115);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(255, 134);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Пользователи";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(1074, 713);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.ticketDataGridView);
             this.Controls.Add(user_IDLabel);
             this.Controls.Add(this.user_IDTextBox);
@@ -409,5 +423,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button button2;
     }
 }
