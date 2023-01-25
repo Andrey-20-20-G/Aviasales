@@ -53,7 +53,8 @@ HTTP AS 'Сайт сервиса' FROM Service");
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             dataGridView1.DataSource = FillDataGridView(@"SELECT  Last_Name+' '+ First_Name+ ' ' + Second_Name as 'ФИО пользователя', 
-CONVERT(VARCHAR(4), Passport_Series) + ' ' + CONVERT(VARCHAR(6), Passport_Number) as 'Пасспортные данные', Users.Passport_date  as 'Дата выдачи паспорта'
+CONVERT(VARCHAR(4), Passport_Series) + ' ' + CONVERT(VARCHAR(6), Passport_Number) as 
+'Пасспортные данные', Users.Passport_date  as 'Дата выдачи паспорта'
 FROM Users INNER JOIN Ticket ON Ticket.User_ID =
 Users.User_ID");
         }
@@ -301,93 +302,7 @@ WHERE Max_Count_of_people > (SELECT AVG(Max_Count_of_people) FROM Line_Avia WHER
             connection.Close();
             button3_Click(this, EventArgs.Empty);
         }
-        #region MyUpdate
-        //void Update()
-        //{
-        //    if ((String.IsNullOrEmpty(textBox4.Text)) &
-        //    (String.IsNullOrEmpty(textBox5.Text)) & (String.IsNullOrEmpty(textBox6.Text)))
-        //    {
-        //        MessageBox.Show("Обязательно введите данные", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-
-        //    int id;
-        //    if (!int.TryParse(textBox4.Text, out id))
-        //    {
-        //        MessageBox.Show("Некоректное значение ID сервиса!", "Внимание",
-        //       MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    double price = 0;
-        //    if (String.IsNullOrEmpty(textBox6.Text))
-        //    {
-        //        MessageBox.Show("Некоректное значение!", "Внимание",
-        //       MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    if (String.IsNullOrEmpty(textBox5.Text))
-        //    {
-        //        MessageBox.Show("Некорректное значение!", "Внимание",
-        //       MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-
-        //    //SqlConnection connection = new SqlConnection(Properties.Settings.Default.AviasalesConnectionString);
-        //    //connection.Open();
-        //    //SqlCommand command = new SqlCommand($@"update FROM Service WHERE  Service_ID = @Service_ID", connection);
-
-        //    //command.Parameters.AddWithValue("Service_ID", textBox4.Text);
-        //    ////command.Parameters.AddWithValue("Service_Name", textBox5.Text);
-        //    ////command.Parameters.AddWithValue("HTTP", textBox6.Text);
-        //    //MessageBox.Show(command.ExecuteNonQuery().ToString());
-        //    //connection.Close();
-        //    //button3_Click(this, EventArgs.Empty);
-
-        //    string sqlUpdate = "UPDATE Service SET {0} [Service_Name]=@Service_Name WHERE Service_ID = @Service_ID";
-        //    SqlConnection connection = new
-        //   SqlConnection(Properties.Settings.Default.AviasalesConnectionString);
-        //    connection.Open();
-        //    SqlCommand command = connection.CreateCommand();
-        //    string sqlValues = "";
-        //    if (!String.IsNullOrEmpty(textBox4.Text))
-        //        sqlValues += "Service_ID=@Service_ID,";
-        //    if (!String.IsNullOrEmpty(textBox5.Text))
-        //        sqlValues += "Service_Name=@Service_Name,";
-        //    if (!String.IsNullOrEmpty(textBox6.Text))
-        //        sqlValues += "HTTP=@HTTP,";
-
-        //    command.CommandText = String.Format(sqlUpdate, sqlValues);
-        //    if (!String.IsNullOrEmpty(textBox4.Text))
-        //        command.Parameters.Add("@Service_ID", radioButton11.Checked);
-        //    command.Parameters.AddWithValue("@Service_ID", id);
-        //    //или другим способом, если необходимо явное указание типа данных
-        //    if (!String.IsNullOrEmpty(textBox5.Text))
-        //        command.Parameters.Add("@Service_Name", SqlDbType.NVarChar).Value =
-        //       textBox5.Text;
-        //    if (!String.IsNullOrEmpty(textBox6.Text))
-        //        command.Parameters.AddWithValue("@HTTP", price);
-
-        //    //command.Parameters.AddWithValue("@Name", radioButton8.Checked);
-        //    //command.Parameters.AddWithValue("@Name", id);
-        //    try
-        //    {
-        //        command.ExecuteNonQuery();
-        //    }
-        //    catch (Exception err)
-        //    {
-        //        MessageBox.Show("Ошибка выполнения запроса:\n" + err.Message,
-        //       "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //    }
-        //    connection.Close();
-        //    button3_Click(this, EventArgs.Empty);
-
-
-        //}
-        #endregion
+    
 
 
         void Update()
@@ -483,6 +398,16 @@ WHERE Max_Count_of_people > (SELECT AVG(Max_Count_of_people) FROM Line_Avia WHER
                 Update();
                 
             }
+        }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

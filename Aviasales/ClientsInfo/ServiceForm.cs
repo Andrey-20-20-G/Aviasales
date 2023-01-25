@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Aviasales
+namespace Aviasales.ClientsInfo
 {
-    public partial class Service : Form
+    public partial class ServiceForm : Form
     {
-        public Service()
+        public ServiceForm()
         {
             InitializeComponent();
         }
@@ -25,18 +25,20 @@ namespace Aviasales
 
         }
 
-        private void Service_Load(object sender, EventArgs e)
+        private void ServiceForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aviasalesDataSet.Service". При необходимости она может быть перемещена или удалена.
             this.serviceTableAdapter.Fill(this.aviasalesDataSet.Service);
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
+            MainForm mainForm = new MainForm();
+            
             this.Hide();
-            var form1 = new MainForm();
-            form1.Show();
+            mainForm.ShowDialog();
+            Application.Exit();
         }
     }
 }

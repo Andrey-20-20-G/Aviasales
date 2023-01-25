@@ -1,6 +1,6 @@
 ﻿namespace Aviasales
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -29,20 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оНасToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.направлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.данныеОПассажирахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сервисToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.билетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.информацияОРейсахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.поискСервисаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.информацияОПользователеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.data3labaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.связьЧерезДанныеОБилетахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.формаДля4ЛабыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -71,7 +67,7 @@
             this.формаДля4ЛабыToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 36);
+            this.menuStrip2.Size = new System.Drawing.Size(800, 33);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -81,8 +77,9 @@
             this.оНасToolStripMenuItem,
             this.выходToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(73, 30);
-            this.menuToolStripMenuItem.Text = "Menu";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(223, 29);
+            this.menuToolStripMenuItem.Text = "Информация о ресурсе";
+            this.menuToolStripMenuItem.Click += new System.EventHandler(this.menuToolStripMenuItem_Click);
             // 
             // оНасToolStripMenuItem
             // 
@@ -105,77 +102,46 @@
             // aboutUsToolStripMenuItem
             // 
             this.aboutUsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.направлениеToolStripMenuItem,
-            this.данныеОПассажирахToolStripMenuItem,
-            this.сервисToolStripMenuItem,
-            this.билетыToolStripMenuItem,
-            this.пользователиToolStripMenuItem});
+            this.информацияОРейсахToolStripMenuItem,
+            this.поискСервисаToolStripMenuItem,
+            this.информацияОПользователеToolStripMenuItem});
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
-            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(65, 30);
-            this.aboutUsToolStripMenuItem.Text = "Data";
+            this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(196, 29);
+            this.aboutUsToolStripMenuItem.Text = "Общая информация";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
-            // направлениеToolStripMenuItem
+            // информацияОРейсахToolStripMenuItem
             // 
-            this.направлениеToolStripMenuItem.Name = "направлениеToolStripMenuItem";
-            this.направлениеToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.направлениеToolStripMenuItem.Text = "Направления";
-            this.направлениеToolStripMenuItem.Click += new System.EventHandler(this.направлениеToolStripMenuItem_Click);
+            this.информацияОРейсахToolStripMenuItem.Name = "информацияОРейсахToolStripMenuItem";
+            this.информацияОРейсахToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.информацияОРейсахToolStripMenuItem.Text = "Информация о рейсах";
+            this.информацияОРейсахToolStripMenuItem.Click += new System.EventHandler(this.информацияОРейсахToolStripMenuItem_Click);
             // 
-            // данныеОПассажирахToolStripMenuItem
+            // поискСервисаToolStripMenuItem
             // 
-            this.данныеОПассажирахToolStripMenuItem.Name = "данныеОПассажирахToolStripMenuItem";
-            this.данныеОПассажирахToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.данныеОПассажирахToolStripMenuItem.Text = "Данные о пассажирах";
-            this.данныеОПассажирахToolStripMenuItem.Click += new System.EventHandler(this.данныеОПассажирахToolStripMenuItem_Click);
+            this.поискСервисаToolStripMenuItem.Name = "поискСервисаToolStripMenuItem";
+            this.поискСервисаToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.поискСервисаToolStripMenuItem.Text = "Поиск сервиса";
+            this.поискСервисаToolStripMenuItem.Click += new System.EventHandler(this.поискСервисаToolStripMenuItem_Click);
             // 
-            // сервисToolStripMenuItem
+            // информацияОПользователеToolStripMenuItem
             // 
-            this.сервисToolStripMenuItem.Name = "сервисToolStripMenuItem";
-            this.сервисToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.сервисToolStripMenuItem.Text = "Сервисы";
-            this.сервисToolStripMenuItem.Click += new System.EventHandler(this.сервисToolStripMenuItem_Click);
-            // 
-            // билетыToolStripMenuItem
-            // 
-            this.билетыToolStripMenuItem.Name = "билетыToolStripMenuItem";
-            this.билетыToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.билетыToolStripMenuItem.Text = "Билеты";
-            this.билетыToolStripMenuItem.Click += new System.EventHandler(this.билетыToolStripMenuItem_Click);
-            // 
-            // пользователиToolStripMenuItem
-            // 
-            this.пользователиToolStripMenuItem.Name = "пользователиToolStripMenuItem";
-            this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
-            this.пользователиToolStripMenuItem.Text = "Пользователи";
-            this.пользователиToolStripMenuItem.Click += new System.EventHandler(this.пользователиToolStripMenuItem_Click);
+            this.информацияОПользователеToolStripMenuItem.Name = "информацияОПользователеToolStripMenuItem";
+            this.информацияОПользователеToolStripMenuItem.Size = new System.Drawing.Size(355, 34);
+            this.информацияОПользователеToolStripMenuItem.Text = "Информация о пользователе";
+            this.информацияОПользователеToolStripMenuItem.Click += new System.EventHandler(this.информацияОПользователеToolStripMenuItem_Click);
             // 
             // data3labaToolStripMenuItem
             // 
-            this.data3labaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.связьЧерезДанныеОБилетахToolStripMenuItem,
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem});
             this.data3labaToolStripMenuItem.Name = "data3labaToolStripMenuItem";
-            this.data3labaToolStripMenuItem.Size = new System.Drawing.Size(122, 30);
-            this.data3labaToolStripMenuItem.Text = "Data_3_laba";
-            // 
-            // связьЧерезДанныеОБилетахToolStripMenuItem
-            // 
-            this.связьЧерезДанныеОБилетахToolStripMenuItem.Name = "связьЧерезДанныеОБилетахToolStripMenuItem";
-            this.связьЧерезДанныеОБилетахToolStripMenuItem.Size = new System.Drawing.Size(419, 34);
-            this.связьЧерезДанныеОБилетахToolStripMenuItem.Text = "Связь через данные о пользователях";
-            this.связьЧерезДанныеОБилетахToolStripMenuItem.Click += new System.EventHandler(this.связьЧерезДанныеОБилетахToolStripMenuItem_Click);
-            // 
-            // связьЧерезДанныеОПассажирахToolStripMenuItem
-            // 
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem.Name = "связьЧерезДанныеОПассажирахToolStripMenuItem";
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem.Size = new System.Drawing.Size(419, 34);
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem.Text = "Связь через данные о билетах";
-            this.связьЧерезДанныеОПассажирахToolStripMenuItem.Click += new System.EventHandler(this.связьЧерезДанныеОПассажирахToolStripMenuItem_Click);
+            this.data3labaToolStripMenuItem.Size = new System.Drawing.Size(228, 29);
+            this.data3labaToolStripMenuItem.Text = "Служебная информация";
+            this.data3labaToolStripMenuItem.Click += new System.EventHandler(this.data3labaToolStripMenuItem_Click);
             // 
             // формаДля4ЛабыToolStripMenuItem
             // 
             this.формаДля4ЛабыToolStripMenuItem.Name = "формаДля4ЛабыToolStripMenuItem";
-            this.формаДля4ЛабыToolStripMenuItem.Size = new System.Drawing.Size(179, 30);
+            this.формаДля4ЛабыToolStripMenuItem.Size = new System.Drawing.Size(179, 29);
             this.формаДля4ЛабыToolStripMenuItem.Text = "Форма для 4 лабы";
             this.формаДля4ЛабыToolStripMenuItem.Click += new System.EventHandler(this.формаДля4ЛабыToolStripMenuItem_Click);
             // 
@@ -186,9 +152,9 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 36);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 33);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -198,7 +164,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton1.Text = "toolStripButton1";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -208,7 +174,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 33);
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -263,7 +229,7 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::Aviasales.Properties.Resources.logo_horizontal_2x_bbbae5a0cd9cfe19492767c23d628de6;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 74);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 66);
             this.pictureBox1.MaximumSize = new System.Drawing.Size(900, 200);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(800, 108);
@@ -271,7 +237,7 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -283,8 +249,10 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "MainForm";
+            this.Text = "Главная страница";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -309,18 +277,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оНасToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem направлениеToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem данныеОПассажирахToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сервисToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem билетыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem пользователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem data3labaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem связьЧерезДанныеОПассажирахToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem связьЧерезДанныеОБилетахToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem формаДля4ЛабыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem информацияОРейсахToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem поискСервисаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem информацияОПользователеToolStripMenuItem;
     }
 }
 

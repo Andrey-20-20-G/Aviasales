@@ -20,7 +20,7 @@ namespace Aviasales
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form1 = new Form1();
+            var form1 = new MainForm();
             form1.Show(); 
         }
 

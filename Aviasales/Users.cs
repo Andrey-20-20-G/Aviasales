@@ -32,14 +32,12 @@ namespace Aviasales
             this.Validate();
             this.usersBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.aviasalesDataSet);
-
         }
 
         private void Users_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "aviasalesDataSet.Users". При необходимости она может быть перемещена или удалена.
             this.usersTableAdapter.Fill(this.aviasalesDataSet.Users);
-
         }
         private void Users_Shown(object sender, EventArgs e)
         {
@@ -53,7 +51,6 @@ namespace Aviasales
             Show();
             Activate();
         }
-
         //переменная для текущего(выбранного) кода сотрудника
         int idCurrent = -1;
         public int ShowSelectForm(int id)
@@ -66,18 +63,12 @@ namespace Aviasales
             else
                 return -1;
         }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form1 = new Form1();
+            var form1 = new MainForm();
             form1.Show();
         }
-
-
-
-
         private void toolStripButtonOK_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
