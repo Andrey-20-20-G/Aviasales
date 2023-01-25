@@ -20,12 +20,9 @@ namespace Aviasales
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form1 = new Form1();
+            var form1 = new MainForm();
             form1.Show();
         }
-
-    
-
         private void usersBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -42,10 +39,6 @@ namespace Aviasales
             this.usersTableAdapter.Fill(this.aviasalesDataSet.Users);
 
         }
-
-
-
-
         string GetSelectedFieldName2()
         {
             return

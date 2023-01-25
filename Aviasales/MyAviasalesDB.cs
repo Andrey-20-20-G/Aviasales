@@ -14,7 +14,7 @@ namespace Aviasales
 
         public void OpenConnection()
         {
-            if(sqlConnection.State == System.Data.ConnectionState.Closed)
+            if (sqlConnection.State == System.Data.ConnectionState.Closed)
                 sqlConnection.Open();
         }
 

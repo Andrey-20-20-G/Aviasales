@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Aviasales.AdminInfo;
+using Aviasales.ClientsInfo;
+using Aviasales.Security;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +13,21 @@ using System.Windows.Forms;
 
 namespace Aviasales
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
 
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+            Application.Exit();
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -118,6 +124,60 @@ namespace Aviasales
             this.Hide();
             var laba4 = new laba4();
             laba4.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void информацияОРейсахToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainInfoForm mainForm = new MainInfoForm();
+            this.Hide();
+            mainForm.ShowDialog();
+            Application.Exit();
+        }
+
+        private void поискСервисаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ServiceForm mainForm = new ServiceForm();
+            this.Hide();
+            mainForm.ShowDialog();
+            Application.Exit();
+        }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void информацияОПользователеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonInfoForm mainForm = new PersonInfoForm();
+            this.Hide();
+            mainForm.ShowDialog();
+            Application.Exit();
+        }
+
+        private void data3labaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (RolesForLoginForm.currentRole != "Клиент")
+            {
+                AdminInfoForm mainForm = new AdminInfoForm();
+                this.Hide();
+                mainForm.ShowDialog();
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("У вас недостаточно прав доступа для просмотра данной информации!!!");
+            }
         }
     }
 }
